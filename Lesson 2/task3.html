@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Full page</title>
+   
+   
+</head>
+<body>
+
+    
+    <script>
+      
+        var login = prompt('Enter your login', '');
+        
+        if (login == 'admin') {
+            
+          var pass = prompt('Enter your parol', '');
+            
+            if ( pass == 'passw0rd') {
+              alert('Welcome home!');
+            } else if (pass == null) {
+              alert('Canceled');
+            }
+              else {
+              alert('Wrong password');    
+              } 
+                
+                
+        } else if (login == null) {
+           alert('Canceled');
+        } else {
+           alert('Access denied');
+        }
+           
+            
+       
+    </script>
+
+  
+</body>
+</html>
