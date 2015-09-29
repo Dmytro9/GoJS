@@ -9,16 +9,40 @@
     <body>
    
 <script>
+       
+    // функция проверяет число на простоту
+    // @var number num
+    // @return bool
+    
+    var start = +prompt('Enter the beggining of diapazon:', 2);
+    var end = +prompt('Enter the end of diapazon:', 20);
+    
+    for (var i = start; i <= end; i++) {
+    
+    if (isSimple(i)) continue;{
         
-        function pow(x, n) {
-            
-          var result = x;
-          for (var i = 1; i < n; i++) {
-              
-               result *= x;
-       }
-         return result;
-       }   
+        console.log(i);
+    }
+    }
+    
+    
+    
+     function isSimple(num) {
+     if (num <= 3) {
+        return true;
+     }
+     
+     for (var d=2; d<num; d++) {
+     if (num % d == 0) {
+     return false;
+     }
+     }
+     return true;
+     }
+     
+    
+    
+    
     
        
 </script>   
