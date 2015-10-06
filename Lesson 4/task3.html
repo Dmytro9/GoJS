@@ -12,15 +12,18 @@
         
       <script>
         
-          function cutText(string, 20) {
-              
-             return (string.length > 20) ?
-                 
-             string.slice(0, 17) + '...' : string;
-              
-        }
+         function bigFirstLetter(str) {
+         if (!str.length) {
+         return '';
+         }
           
-          
+          var i = str[0].toUpperCase();
+          str[0] = i;
+          return str;  
+         }
+          console.log(bigFirstLetter);   
+             
+             
      </script>
     
     
