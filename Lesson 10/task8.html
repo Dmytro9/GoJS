@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>JS</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+    
+      <script>
+          
+/**
+ * Считает сколько раз использовалось слово в массиве
+ * @param array arr
+ * @return Object
+ */
+          
+          function countClassNameInString( arr ) {
+            var obj = {};
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i] in obj) {
+                     obj[ arr[i] ] = obj[ arr[i] ] + 1; 
+             }  else {
+              obj[ arr[i] ] = 1;
+             }
+           }
+  
+            return obj;
+         }
+    var arr =  ['link', 'menu', 'menu__item', 'menu__item', 'header', 'link', 'footer', 'sidebar', 'link'];
+
+/**
+ * Из массива выбирает уникальные имена классов, сортируя
+ * их по частоте использования 
+ *
+ * @param array arr
+ * @return Object
+ */          
+         function getMostUseClass( arr ) {
+  
+           var objClass = countClassNameInString(arr);
+  
+            return Object.keys( objClass ).sort( function( a, b ){
+                return objClass[ b ] - objClass[ a ];
+                 });
+           }   
+                 console.log(getMostUseClass( arr ) );
+          
+       </script>
+
+    </body>
+</html>
