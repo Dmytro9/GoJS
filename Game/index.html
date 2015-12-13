@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>GunMan</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>  
+  
+    <div class="container">
+
+       <div class="intro">
+         <p>GAME</p>
+         <h1>GUNMAN</h1>
+         <ul class="intro__list">
+           <li class="start__game">Single player game</li>
+           <li>Play in two</li>
+         </ul>
+  </div>
+       <!--  end intro-->
+        <div class="header">
+           <div class="header__wrapper">
+            <p class="header__you">Time. You</p>
+            <p class="header__timer" id="timer">0.0</p>
+            <br />
+            <p class="header__gunman">Gunman</p>
+            <p class="header__gunman-time">0.8</p>
+          </div>
+        </div>
+        <!--end header-->
+        <div class="content">
+            <div class="content__background">
+                <div class="content__alert"></div>               
+                <div class="content__gunman"></div>
+            </div>
+            <!--end content__background-->
+        </div>
+        <!--end content-->
+        <div class="footer">
+            <p class="footer__money"><span class="footer_backs">$</span><span class="footer__amount-of-money">0</span></p>
+            <p class="footer__reward">Reward</p>
+            <input class="footer__next" type="image" src="img/next-arrow.png" alt="Next Level" />
+            <p class="footer__level">Level<span class="footer__number-of-level">1</span></p>
+        </div>
+        <!--end footer-->
+    </div>
+    <!--end container-->
+    
+
+    <!-- connection JS -->
+    <script type="text/jscript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="file.js"></script>
+</body>
+
+</html>

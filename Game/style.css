@@ -1,0 +1,219 @@
+@import url('reset.css');
+
+html {
+  height: 100%;
+  background-color: dimgray;
+}
+body {
+  text-align: center;
+  font-family: 'Press Start 2P', cursive;
+}
+.container {
+  border: 1px solid #fff;
+  width: 264px;
+  margin: 25px auto;
+  position: relative;
+  zoom: 2.7;
+}
+.intro {
+  z-index: 999;
+  width: 264px;
+  background-color: #BDB76B;
+  height: 192px;
+  position: absolute;
+}
+.intro p {
+  margin-top: 20px;
+  font-size: 15px;
+  font-weight: 900;
+  color: #A52A2A;
+}
+.intro h1 {
+  font-weight: 900;
+  font-size: 30px;
+  color: #00008B;
+  margin-top: 5px;
+  text-decoration: underline;
+}
+.intro__list {
+  margin-top: 20px;
+  line-height: 1.5;
+  font-size: 13px;
+  font-weight: 900;
+}
+.intro__list li {
+  opacity: 0.7;
+  cursor: pointer;
+}
+.start__game:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  opacity: 1;
+}
+
+/*HEADER*/
+.header {
+  position: relative;
+  height: 28px;
+  background-color: #000;
+  color: green;
+  font-weight: 800;
+  overflow: hidden;
+  font-size: 7px;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+.header__wrapper {
+  position: absolute;
+  left: 100px;
+  text-align: center;
+}
+.header p {
+  display: inline-block;
+}
+.header__timer,
+.header__gunman-time {
+  font-size: 10px;
+  padding-right: 10px;
+}
+.header__you {
+  width: 50px;
+  margin-top: 2px;
+  margin-right: 10px;
+  border: 1px solid green;
+  border-radius: 2px;
+  
+}
+.header__gunman {
+  margin-top: 3px;
+  margin-right: 10px;
+  width: 50px;
+  border: 1px solid green;
+  border-radius: 2px;
+  margin-bottom: 2px;
+}
+
+/*CONTENT*/
+.content {
+  cursor:  crosshair;
+  position: relative;
+  background-color: orangered;
+}
+.content__background {
+  height: 134px;
+  background: url(img/bg.png) no-repeat;
+}
+.content__gunman {
+  width: 33px;
+  height: 64px;
+  top: 40px;
+  position: absolute;
+  right: 0;
+}
+/*
+.gunman__right {
+  right: 0;
+}
+*/
+.gunman__move {
+  background-image: url(img/gunman.png);
+  right: 120px;
+  transition: right 5s;
+  animation: play 0.3s steps(3) infinite;
+}
+@keyframes play {
+  100% {
+    background-position: -99px 0;
+  }
+}
+.gunman__stop {
+  background-image: url(img/gunman.png);
+  right: 120px;
+  background-position: -99px 0;
+}
+
+.content__alert {
+  position: absolute;
+  background: #FFDD00;
+  color: #00008B;
+  top: 15px;
+  right: 127px;
+  display: none;
+  border-radius: 3px;
+  border: #000 1px solid;
+  font-size: 9px;
+  font-weight: 600;
+  padding: 2px;
+}
+.gunman__take-gun {
+  background-image: url(img/gunman.png);
+  right: 120px;
+  background-position: -202px 0;
+}
+.gunman__drops {
+  right: 120px;
+  width: 32px;
+  height: 64px;
+  background-image: url(img/gunman.png);
+  background-position: -373px 0;
+}
+.gunman__fail {
+  background-image: url(img/gunman.png);
+  right: 120px;
+  background-position: -704px 0;
+}
+
+/*FOOTER*/
+.footer {
+  height: 30px;
+  background-color: #000;
+  position: relative;
+  text-transform: uppercase;
+}
+.footer p {
+  font-weight: 800;
+}
+.footer__next {
+  display: none;
+  position: absolute;
+  top: -4px;
+  left: 117px;
+  width: 40px;
+  outline: none;
+}
+.footer__next:hover {
+  left: 117.4px;
+  top: -4.5;
+}
+.footer_backs {
+  position: absolute;
+  left: 20px;
+  top: 3px;
+  color: #fff;
+  font-size: 10px;
+}
+.footer__amount-of-money {
+  position: absolute;
+  top: 3px;
+  left: 30px;
+  color: green;
+  font-size: 10px;
+}
+.footer__reward {
+  position: absolute;
+  top: 16px;
+  left: 20px;
+  font-size: 7.5px;
+  color: green;
+}
+.footer__level {
+  color: green;
+  font-size: 8.5px;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  text-decoration: underline;
+}
+.footer__level span {
+  padding-left: 5px;
+}
